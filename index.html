@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bird Watch Counter</title>
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google 'Nunito' Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Canvas Confetti Libary CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+</head>
+<body>
+    <!-- Title and instructions -->
+
+    <div id="headline">
+        <h1>Bird Watch Counter</h1>
+        
+        <p>How many of different birds will you see today?<br />
+            Simply click on the plus sign '+' to add a bird you've seen or the minus '-' to take one away.<br />
+            To see your final count click the 'Submit Result' button at the bottom of the screen.</p>
+        
+    </div>
+
+    <!-- First column of bird counters-->
+    <div class="flex-container">
+        <div class="column">
+            <div class="bird">
+                <h4>Blackbird</h4>
+                <img src="img\blackbird.jpg" alt="A male Blackbird on a wooden fence against a blue sky."/>
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumber()" type="button">-</button>
+                    <span id="display">0</span>
+                    <button value="Increase" id="inc" onclick="incNumber()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Robin</h4>
+                <img src="img\robin.jpg" alt="A robin siting on a curved metal pole with a faded background." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberR()" type="button">-</button>
+                    <span id="robinDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberR()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Blue Tit</h4>
+                <img src="img\bluetit.jpg" alt="Blue tit sitting on a wooden fence." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberBT()" type="button">-</button>
+                    <span id="bluetitDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberBT()" type="button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second column of bird counters-->
+        <div class="column">
+            <div class="bird">
+                <h4>Coal Tit</h4>
+                <img src="img\coaltit.jpg" alt="Coal tit in amongst branches with green leaves." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberCT()" type="button">-</button>
+                    <span id="coaltitDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberCT()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Collared Dove</h4>
+                <img src="img\collareddove.jpg" alt="Collared Dove sitting on a large branch." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberCD()" type="button">-</button>
+                    <span id="doveDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberCD()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Gold Finch</h4>
+                <img src="img\goldfinch.jpg" alt="Goldfinch sitting on a thistle in focus with a blurred background." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberGF()" type="button">-</button>
+                    <span id="goldfinchDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberGF()" type="button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third column of bird counters-->
+        <div class="column">
+            <div class="bird">
+                <h4>Great Tit</h4>
+                <img src="img\greattit.jpg" alt="Great tit standing on a thin branch." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberGT()" type="button">-</button>
+                    <span id="greatDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberGT()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Magpie</h4>
+                <img src="img\magpie.jpg" alt="Magpie walking through grass." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberM()" type="button">-</button>
+                    <span id="magpieDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberM()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Starling</h4>
+                <img src="img\starling.jpg" alt="Young Starling sitting on wodden deck." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberST()" type="button">-</button>
+                    <span id="starlingDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberST()" type="button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fourth column of bird counters-->
+        <div class="column">
+            <div class="bird">
+                <h4>Sparrow</h4>
+                <img src="img\sparrow.jpg" alt="A sparrow siting on wood." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberSP()" type="button">-</button>
+                    <span id="sparrowDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberSP()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Wood Pigeon</h4>
+                <img src="img\woodpigeon.jpg" alt="Wood Pigeon sitting on a nest in a tree." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberW()" type="button">-</button>
+                    <span id="pigeonDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberW()" type="button">+</button>
+                </div>
+            </div>
+            <div class="bird">
+                <h4>Long Tailed tit</h4>
+                <img src="img\longtailedtit.jpg" alt="Long tailed tit standing on thin twig with a blurred background." />
+                <br />
+                <div class="counting">
+                    <button value="Decrease" id="dec" onclick="decNumberLT()" type="button">-</button>
+                    <span id="longtailedDisplay">0</span>
+                    <button value="Increase" id="inc" onclick="incNumberLT()" type="button">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <p>Did you see any other birds or wildlife? You can write them down in the box below.</p>
+
+            <label for="otherBirds">Enter your birds or wildlife here:</label><br/>
+            
+            <textarea id="otherBirds" name="otherBirds" rows="4" cols="30"></textarea>
+        </div>
+
+    </div>
+    
+
+    <!-- Display answers section with button -->
+    <div class="resultSection">
+        <h3 class="">Show your final result!</h3>
+    
+        <button value="Submit" id="submitanswer" onclick="submitResult()" type="button">Submit Result</button>
+    </div>
+
+    <!-- The Modal -->
+    <div id="answerSection" class="answers">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <span id="answer"></span>
+        </div>
+    
+    </div>
+        
+    <!--
+    <div class="answerSection">
+        <span id="answer"></span>
+    </div>
+    -->
+
+    <!-- JavaScript File -->
+    <script src="app.js"></script>
+</body>
+</html>
