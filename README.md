@@ -11,6 +11,7 @@ It was created using HTML5, CSS3, Flexbox and Vanilla JavaScript.
 The features are, clickable buttons to add or subtract from the total, a submit button which will display your total findings as a list within a popup box. This submit button also fires confetti. (Confetti is from [Catdad](https://github.com/catdad/canvas-confetti)).
 
 **Language Icons**
+
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,git&perline=9)](https://skillicons.dev)
 
 **Tools used**
@@ -19,7 +20,7 @@ The features are, clickable buttons to add or subtract from the total, a submit 
 
 ## View it live
 
-You can view the project and have a go [here]().
+You can view the project and have a go [here](https://rclarkeweb.github.io/bird-watch-counter/).
 
 ## Usage and license
 
